@@ -2,14 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Rules\Password;
 
 class AuthController extends Controller
 {
     public function showLoginForm()
     {
-        // Se já estiver logado, manda pro dashboard
         if (Auth::check()) {
             return redirect()->route('dashboard');
         }
@@ -18,23 +20,48 @@ class AuthController extends Controller
 
     public function login(Request $request)
     {
-        // Validação básica
         $credentials = $request->validate([
             'email' => ['required', 'email'],
-            'password' => ['required', 'string'],
+            'password' => ['required'],
         ]);
 
-        // Tentativa de login
         $remember = $request->boolean('remember');
+
         if (Auth::attempt($credentials, $remember)) {
             $request->session()->regenerate();
             return redirect()->intended(route('dashboard'));
         }
 
-        // Falhou
         return back()
             ->withErrors(['email' => 'Credenciais inválidas.'])
-            ->onlyInput('email');
+            ->withInput();
+    }
+
+    public function showRegisterForm()
+    {
+        if (Auth::check()) {
+            return redirect()->route('dashboard');
+        }
+        return view('auth.register');
+    }
+
+    public function register(Request $request)
+    {
+        $data = $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'email', 'max:255', 'unique:users,email'],
+            'password' => ['required', 'confirmed', Password::min(6)],
+        ]);
+
+        $user = User::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'password' => Hash::make($data['password']),
+        ]);
+
+        Auth::login($user);
+
+        return redirect()->route('dashboard');
     }
 
     public function logout(Request $request)
@@ -42,7 +69,6 @@ class AuthController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-
-        return redirect('/'); // volta para a home
+        return redirect()->route('login');
     }
 }

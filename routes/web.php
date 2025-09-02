@@ -3,28 +3,47 @@
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
+/*
+ * Entrada: sempre redireciona para login (quem já estiver logado vai pro dashboard)
+ */
 Route::get('/', function () {
-    return view('home');
+    return redirect()->route('login');
 });
 
-Route::get('/modalidades', function () {
-    return view('modalidades');
+/*
+ * Rotas abertas apenas para guests (não logados).
+ * OBS: vamos ajustar RouteServiceProvider::HOME para /dashboard (ver mais abaixo).
+ */
+Route::middleware('guest')->group(function () {
+    Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+    Route::post('/login', [AuthController::class, 'login'])->name('login.post');
+
+    Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register');
+    Route::post('/register', [AuthController::class, 'register'])->name('register.post');
 });
 
-Route::get('/matricula', function () {
-    return view('matricula');
-});
-
-Route::get('/contato', function () {
-    return view('contato');
-});
-
-// Rotas de autenticação
-Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
-Route::post('/login', [AuthController::class, 'login'])->name('login.post');
+/*
+ * Logout (pode ser acessado mesmo por usuários autenticados)
+ */
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
-// Exemplo de rota protegida (apenas logado acessa)
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware('auth')->name('dashboard');
+/*
+ * Rotas protegidas por autenticação
+ */
+Route::middleware('auth')->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+
+    Route::get('/modalidades', function () {
+        return view('modalidades');
+    });
+
+    Route::get('/matricula', function () {
+        return view('matricula');
+    });
+
+    Route::get('/contato', function () {
+        return view('contato');
+    });
+});
