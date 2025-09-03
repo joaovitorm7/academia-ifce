@@ -3,7 +3,9 @@
 @section('title','Login')
 
 @section('content')
-<img src="{{ asset('Campus_cedro.png') }}" alt="Imagem da logo do IFCE Campus Cedro" class="logo-ifce">
+<div class="logo-container">
+    <img src="{{ asset('Campus_cedro.png') }}" alt="Imagem da logo do IFCE Campus Cedro" class="logo-ifce">
+</div>
 <div class="login-card">
     <h1>Sistema de Academia</h1>
     <h1>Login</h1>

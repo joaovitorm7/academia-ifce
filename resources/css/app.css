@@ -77,11 +77,10 @@ footer {
   padding: 40px;
 }
 
-.logo-ifce {
+.logo-container .logo-ifce {
   max-width: 100%;
   height: 100px;
   margin-bottom: 20px;
-
 }
 
 .login-card {
@@ -165,4 +164,87 @@ footer {
   color: #006400;
   text-decoration: none;
   font-weight: 700;
+}
+
+
+/* Dashboard */
+.dash-header { margin-bottom: 16px; }
+.dash-title { display:flex; align-items:center; gap:14px; }
+
+.grid {
+  display:grid;
+  gap:16px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.dash-sobre {
+  gap: 15px;
+  margin-bottom: 7rem;
+}
+
+.sobre-conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 100px;
+}
+
+.sobre-textos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.title-academia {
+  color: #006400; 
+  font-size: 30px;
+  margin-bottom: 2px;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 35px;
+}
+
+.texto-academia {
+  font-size: 18px;
+  font-weight: lighter;
+  color: #333;
+  text-align: justify;
+  width: 70%;
+}
+
+.imagem-academia {
+  width: 45%;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.card {
+  background:#fff;
+  border-radius:12px;
+  padding:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,.06);
+}
+
+.card h2 { font-size:18px; margin-bottom:10px; }
+
+.list { list-style:none; display:grid; gap:6px; }
+.links { display:flex; gap:10px; margin-top:10px; }
+.links a {
+  background:#006400; color:#fff; text-decoration:none;
+  padding:8px 12px; border-radius:8px; font-weight:700;
+}
+
+.badges { display:flex; flex-wrap:wrap; gap:8px; }
+.badge {
+  background:#e6f4ea; color:#065f46; padding:6px 10px;
+  border-radius:999px; font-size:12px; font-weight:700;
+}
+
+.subtitle { color:#555; }
+
+.encerrar-sessao {
+  margin-bottom: 20px;
+  text-align: center;
 }

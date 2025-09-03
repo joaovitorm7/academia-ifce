@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardController;
 
 /*
  * Entrada: sempre redireciona para login (quem já estiver logado vai pro dashboard)
@@ -31,9 +32,7 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
  * Rotas protegidas por autenticação
  */
 Route::middleware('auth')->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
     Route::get('/modalidades', function () {
         return view('modalidades');
@@ -47,3 +46,4 @@ Route::middleware('auth')->group(function () {
         return view('contato');
     });
 });
+
