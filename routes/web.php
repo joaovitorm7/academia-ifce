@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\UserController;
 
 /*
  * Entrada: sempre redireciona para login (quem já estiver logado vai pro dashboard)
@@ -21,6 +22,10 @@ Route::middleware('guest')->group(function () {
 
     Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register');
     Route::post('/register', [AuthController::class, 'register'])->name('register.post');
+
+    // Página configuração
+    Route::get('/configuracoes', [App\Http\Controllers\UserController::class, 'edit'])->name('config.edit');
+    Route::post('/configuracoes', [App\Http\Controllers\UserController::class, 'update'])->name('config.update');
 });
 
 /*
@@ -46,4 +51,7 @@ Route::middleware('auth')->group(function () {
         return view('contato');
     });
 });
+
+// 
+
 

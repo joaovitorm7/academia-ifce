@@ -22,17 +22,18 @@
             <h2 class="title-academia">Sobre a Academia do IFCE</h2>
             <p class="texto-academia">Academia do IFCE Cedro foi fundada em 2023, tem o intuito de promover a prática esportiva e o bem-estar da comunidade. É livre para todos os estudantes, que precisam somente reservar um horário para utilizar as instalações. Aqui você encontrará um ambiente acolhedor e motivador para suas atividades físicas.</p>
         </div>
-        <img src="{{ asset('foto-de-academia.webp') }}" alt="Imagem ficticia da academia IFCE - Cedro" class="imagem-academia">
+        <img src="{{ asset('foto-academia.jpg') }}" alt="Imagem ficticia da academia IFCE - Cedro" class="imagem-academia">
     </div>
 </div>
 
 
 <div class="grid">
+    <!--
     <section class="card">
         <h2>Sobre</h2>
         <p>{{ $academia->descricao ?? 'Informações ainda não cadastradas.' }}</p>
     </section>
-
+    -->
     <section class="card">
         <h2>Contato</h2>
         <ul class="list">
@@ -50,6 +51,9 @@
     <section class="card">
         <h2>Horário de Funcionamento</h2>
         <p>{{ $academia->horario_funcionamento ?? '—' }}</p>
+        <button class="btn-card">
+            <a href="">Reservar Horário</a>
+        </button>
     </section>
 
     <section class="card">
@@ -62,14 +66,14 @@
                 <p>—</p>
             @endif
         </div>
+        <button class="btn-card"><a href="#">Saber mais</a></button>
     </section>
-
-    <!-- Logout Section -->
+</div>
+ <!-- Logout Section -->
     <section class="encerrar-sessao">
         <form method="POST" action="{{ route('logout') }}">
             @csrf
-            <button type="submit">Encerrar Sessão</button>
+            <button type="submit" class="btn-sessao">Encerrar Sessão</button>
         </form>
     </section>
-</div>
 @endsection

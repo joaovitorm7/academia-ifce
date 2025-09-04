@@ -179,7 +179,7 @@ footer {
 
 .dash-sobre {
   gap: 15px;
-  margin-bottom: 7rem;
+  margin-bottom: 10rem;
 }
 
 .sobre-conteudo {
@@ -194,7 +194,6 @@ footer {
   flex-direction: column;
   align-items: center;
 }
-
 
 .title-academia {
   color: #006400; 
@@ -220,11 +219,22 @@ footer {
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
+.grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  max-width: 900px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
 .card {
   background:#fff;
   border-radius:12px;
   padding:16px;
   box-shadow:0 10px 30px rgba(0,0,0,.06);
+  position: relative;
+  min-height: 220px;
 }
 
 .card h2 { font-size:18px; margin-bottom:10px; }
@@ -244,7 +254,48 @@ footer {
 
 .subtitle { color:#555; }
 
-.encerrar-sessao {
-  margin-bottom: 20px;
+.btn-card {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  background-color: #006400;
+  color: white;
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin-top: 0;
   text-align: center;
+}
+
+.btn-card a {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.encerrar-sessao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0 20px 0;
+  text-align: center;
+}
+
+.btn-sessao {
+  background: #006400;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 32px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.2s;
+  margin: 0 auto;
+  display: block;
+}
+
+.btn-sessao:hover {
+  background: #014d37;
 }
