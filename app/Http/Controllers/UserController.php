@@ -9,18 +9,31 @@ use App\Models\User;
 
 class UserController extends Controller
 {
+    /**
+     * Exibe a página de configurações do usuário logado
+     */
     public function edit()
     {
-        // Pegamos o usuário logado
         $user = Auth::user();
+
+        if (!$user) {
+            return redirect()->route('login')->with('error', 'Você precisa estar logado.');
+        }
+
         return view('configuracoes', compact('user'));
     }
 
+    /**
+     * Atualiza os dados do usuário logado
+     */
     public function update(Request $request)
     {
-
-        dd(Auth::user());
+        /** @var \App\Models\User $user */
         $user = Auth::user();
+
+        if (!$user) {
+            return redirect()->route('login')->with('error', 'Usuário não autenticado.');
+        }
 
         // Validação dos campos
         $request->validate([
@@ -30,14 +43,15 @@ class UserController extends Controller
         ]);
 
         // Atualizar nome e email
-        $user->name = $request->name;
-        $user->email = $request->email;
+        $user->name = $request->input('name');
+        $user->email = $request->input('email');
 
-        // Atualizar senha somente se o campo não estiver vazio
+        // Atualizar senha somente se for enviada
         if ($request->filled('password')) {
-            $user->password = Hash::make($request->password);
+            $user->password = Hash::make($request->input('password'));
         }
 
+        // Salvar alterações no banco
         $user->save();
 
         return redirect()->route('config.edit')->with('success', 'Dados atualizados com sucesso!');

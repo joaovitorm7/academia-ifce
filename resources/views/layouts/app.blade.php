@@ -17,7 +17,7 @@
                 <li><a href="/modalidades">Modalidades</a></li>
                 <li><a href="/matricula">Matrícula</a></li>
                 <li><a href="/contato">Contato</a></li>
-                <li><a href="/login">Login</a></li>
+                <li><a href="/configuracoes">Configurações</a></li>
             </ul>
         </nav>
     </header>

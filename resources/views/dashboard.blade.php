@@ -66,7 +66,7 @@
                 <p>—</p>
             @endif
         </div>
-        <button class="btn-card"><a href="#">Saber mais</a></button>
+        <button class="btn-card"><a href="http://127.0.0.1:8000/modalidades">Saber mais</a></button>
     </section>
 </div>
  <!-- Logout Section -->

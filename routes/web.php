@@ -5,8 +5,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserController;
 
-
-
 /*
  * Rota Principal: Redireciona para a tela de login.
  */
@@ -23,10 +21,6 @@ Route::middleware('guest')->group(function () {
 
     Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register');
     Route::post('/register', [AuthController::class, 'register'])->name('register.post');
-
-    // Página configuração
-    Route::get('/configuracoes', [App\Http\Controllers\UserController::class, 'edit'])->name('config.edit');
-    Route::post('/configuracoes', [App\Http\Controllers\UserController::class, 'update'])->name('config.update');
 });
 
 /*
@@ -54,8 +48,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/matricula', function () {
         return view('matricula');
     })->name('matricula');
+
+    // 🔹 Página de Configurações (somente usuário logado pode acessar)
+    Route::get('/configuracoes', [UserController::class, 'edit'])->name('config.edit');
+    Route::put('/configuracoes', [UserController::class, 'update'])->name('config.update');
 });
-
-// 
-
-
