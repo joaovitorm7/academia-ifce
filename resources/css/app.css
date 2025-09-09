@@ -24,12 +24,12 @@ body {
 
 /* Navbar */
 .navbar {
-    background-color: #006400;
+    background-color: #00843D;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 50px;
+    padding: 1rem 2rem;
 }
 
 .navbar .logo {
