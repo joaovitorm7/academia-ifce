@@ -91,7 +91,7 @@
             padding: 2rem;
             flex: 1;
             min-width: 300px;
-            max-width: 550px; 
+            max-width: 550px;
             display: flex;
             flex-direction: column;
         }
@@ -139,7 +139,6 @@
             height: 100%;
             border: none;
         }
-
 
         @media (max-width: 768px) {
             .header {
@@ -215,14 +214,14 @@
                 <h2>Localização</h2>
                 <div class="map-container">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.3361559441163!2d-38.54341592398555!3d-3.743128496229235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c74900ce322791%3A0xc068865f3f2d22a!2sInstituto%20Federal%20do%20Cear%C3%A1%20-%20Campus%20Fortaleza!5e0!3m2!1spt-BR!2sbr!4v1701360000000!5m2!1spt-BR!2sbr"
+                        src="https://maps.app.goo.gl/vnktGtn5jRyjEyny8"
                         width="600"
-                        height="450"
+                        height: 450px;
                         style="border:0;"
                         allowfullscreen=""
                         loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                    ></iframe>
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
             </div>
         </div>
