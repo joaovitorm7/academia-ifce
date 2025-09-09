@@ -31,6 +31,9 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 /*
  * Rotas Públicas (Acessíveis por qualquer um, logado ou não)
  */
+Route::get('/contato', function () {
+    return view('contato');
+})->name('contato');
 Route::get('/modalidades', function () {
     return view('modalidades');
 })->name('modalidades');
