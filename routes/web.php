@@ -49,10 +49,19 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
     Route::get('/matricula', function () {
-        return view('matricula');
+        return view('matriculas.create');
     })->name('matricula');
 
     // 🔹 Página de Configurações (somente usuário logado pode acessar)
     Route::get('/configuracoes', [UserController::class, 'edit'])->name('config.edit');
     Route::put('/configuracoes', [UserController::class, 'update'])->name('config.update');
 });
+
+
+use App\Http\Controllers\MatriculaController;
+Route::get('/matriculas', [MatriculaController::class, 'index'])->name('matriculas.create');
+Route::get('/matriculas/create', [MatriculaController::class, 'create'])->name('matriculas.create');
+Route::post('/matriculas', [MatriculaController::class, 'store'])->name('matriculas.store');
+
+
+

@@ -15,7 +15,7 @@
             <ul class="nav-links">
                 <li><a href="/">Início</a></li>
                 <li><a href="/modalidades">Modalidades</a></li>
-                <li><a href="/matricula">Matrícula</a></li>
+                <li><a href="/matriculas/create">Matrícula</a></li>
                 <li><a href="/contato">Contato</a></li>
                 <li><a href="/configuracoes">Configurações</a></li>
             </ul>
