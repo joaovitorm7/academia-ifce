@@ -121,23 +121,23 @@
             <input type="number" name="altura" value="{{ old('altura') }}" required>
             @error('altura') <small>{{ $message }}</small> @enderror
 
-            <label for="circunferenciaCintura">Circunferência da Cintura (cm)</label>
-            <input type="number" name="circunferenciaCintura" value="{{ old('circunferenciaCintura') }}">
+            <label for="circunferencia_cintura">Circunferência da Cintura (cm)</label>
+            <input type="number" name="circunferencia_cintura" value="{{ old('circunferencia_cintura') }}">
 
-            <label for="circunferenciaQuadril">Circunferência do Quadril (cm)</label>
-            <input type="number" name="circunferenciaQuadril" value="{{ old('circunferenciaQuadril') }}">
+            <label for="circunferencia_quadril">Circunferência do Quadril (cm)</label>
+            <input type="number" name="circunferencia_quadril" value="{{ old('circunferencia_quadril') }}">
 
             <label>Nível de Atividade Física *</label>
             <div class="radio-group">
-                <label><input type="radio" name="nivelAtividade" value="sedentario" {{ old('nivelAtividade')=='sedentario'?'checked':'' }}> Sedentário</label>
-                <label><input type="radio" name="nivelAtividade" value="leve" {{ old('nivelAtividade')=='leve'?'checked':'' }}> Leve</label>
-                <label><input type="radio" name="nivelAtividade" value="moderado" {{ old('nivelAtividade')=='moderado'?'checked':'' }}> Moderado</label>
-                <label><input type="radio" name="nivelAtividade" value="intenso" {{ old('nivelAtividade')=='intenso'?'checked':'' }}> Intenso</label>
+                <label><input type="radio" name="nivel_atividade" value="sedentario" {{ old('nivel_atividade')=='sedentario'?'checked':'' }}> Sedentário</label>
+                <label><input type="radio" name="nivel_atividade" value="leve" {{ old('nivel_atividade')=='leve'?'checked':'' }}> Leve</label>
+                <label><input type="radio" name="nivel_atividade" value="moderado" {{ old('nivel_atividade')=='moderado'?'checked':'' }}> Moderado</label>
+                <label><input type="radio" name="nivel_atividade" value="intenso" {{ old('nivel_atividade')=='intenso'?'checked':'' }}> Intenso</label>
             </div>
-            @error('nivelAtividade') <small>{{ $message }}</small> @enderror
+            @error('nivel_atividade') <small>{{ $message }}</small> @enderror
 
-            <label for="historicoSaude">Histórico de Saúde</label>
-            <textarea name="historicoSaude">{{ old('historicoSaude') }}</textarea>
+            <label for="historico_saude">Histórico de Saúde</label>
+            <textarea name="historico_saude">{{ old('historico_saude') }}</textarea>
 
             <!-- Preferências -->
             <h4>Preferências de Treino</h4>
