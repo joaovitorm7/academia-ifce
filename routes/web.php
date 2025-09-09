@@ -52,10 +52,14 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
     Route::get('/matricula', function () {
-        return view('matricula');
+        return view('matriculas.create');
     })->name('matricula');
 });
 
 // 
+use App\Http\Controllers\MatriculaController;
+Route::get('/matriculas', [MatriculaController::class, 'index'])->name('matriculas.create');
+Route::get('/matriculas/create', [MatriculaController::class, 'create'])->name('matriculas.create');
+Route::post('/matriculas', [MatriculaController::class, 'store'])->name('matriculas.store');
 
 
