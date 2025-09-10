@@ -1,0 +1,154 @@
+{
+  "projectName": "laravel/laravel",
+  "projectVersion": "v12.28.1",
+  "generatedAt": "2025-09-10T16:45:27.891Z",
+  "diagrams": [
+    {
+      "id": "AuthController-showLoginForm",
+      "name": "AuthController::showLoginForm",
+      "controller": "Auth",
+      "method": "showLoginForm",
+      "type": "generic",
+      "description": "Handles showLoginForm operation in AuthController",
+      "fileName": "AuthController_showLoginForm.md",
+      "models": [],
+      "timestamp": "2025-09-10T16:45:27.842Z"
+    },
+    {
+      "id": "AuthController-login",
+      "name": "AuthController::login",
+      "controller": "Auth",
+      "method": "login",
+      "type": "generic",
+      "description": "Handles login operation in AuthController",
+      "fileName": "AuthController_login.md",
+      "models": [],
+      "timestamp": "2025-09-10T16:45:27.843Z"
+    },
+    {
+      "id": "AuthController-showRegisterForm",
+      "name": "AuthController::showRegisterForm",
+      "controller": "Auth",
+      "method": "showRegisterForm",
+      "type": "generic",
+      "description": "Handles showRegisterForm operation in AuthController",
+      "fileName": "AuthController_showRegisterForm.md",
+      "models": [],
+      "timestamp": "2025-09-10T16:45:27.843Z"
+    },
+    {
+      "id": "AuthController-register",
+      "name": "AuthController::register",
+      "controller": "Auth",
+      "method": "register",
+      "type": "generic",
+      "description": "Handles register operation in AuthController",
+      "fileName": "AuthController_register.md",
+      "models": [
+        "User"
+      ],
+      "timestamp": "2025-09-10T16:45:27.844Z"
+    },
+    {
+      "id": "AuthController-logout",
+      "name": "AuthController::logout",
+      "controller": "Auth",
+      "method": "logout",
+      "type": "generic",
+      "description": "Handles logout operation in AuthController",
+      "fileName": "AuthController_logout.md",
+      "models": [],
+      "timestamp": "2025-09-10T16:45:27.844Z"
+    },
+    {
+      "id": "DashboardController-index",
+      "name": "DashboardController::index",
+      "controller": "Dashboard",
+      "method": "index",
+      "type": "list",
+      "description": "Retrieves a collection of resources from DashboardController",
+      "fileName": "DashboardController_index.md",
+      "models": [
+        "Academia"
+      ],
+      "timestamp": "2025-09-10T16:45:27.845Z"
+    },
+    {
+      "id": "MatriculaController-index",
+      "name": "MatriculaController::index",
+      "controller": "Matricula",
+      "method": "index",
+      "type": "list",
+      "description": "Retrieves a collection of resources from MatriculaController",
+      "fileName": "MatriculaController_index.md",
+      "models": [
+        "Matricula"
+      ],
+      "timestamp": "2025-09-10T16:45:27.846Z"
+    },
+    {
+      "id": "MatriculaController-create",
+      "name": "MatriculaController::create",
+      "controller": "Matricula",
+      "method": "create",
+      "type": "create",
+      "description": "Creates a new resource in MatriculaController",
+      "fileName": "MatriculaController_create.md",
+      "models": [],
+      "timestamp": "2025-09-10T16:45:27.846Z"
+    },
+    {
+      "id": "MatriculaController-store",
+      "name": "MatriculaController::store",
+      "controller": "Matricula",
+      "method": "store",
+      "type": "create",
+      "description": "Creates a new resource in MatriculaController",
+      "fileName": "MatriculaController_store.md",
+      "models": [
+        "Matricula"
+      ],
+      "timestamp": "2025-09-10T16:45:27.847Z"
+    },
+    {
+      "id": "UserController-edit",
+      "name": "UserController::edit",
+      "controller": "User",
+      "method": "edit",
+      "type": "update",
+      "description": "Updates an existing resource in UserController",
+      "fileName": "UserController_edit.md",
+      "models": [],
+      "timestamp": "2025-09-10T16:45:27.847Z"
+    },
+    {
+      "id": "UserController-update",
+      "name": "UserController::update",
+      "controller": "User",
+      "method": "update",
+      "type": "update",
+      "description": "Updates an existing resource in UserController",
+      "fileName": "UserController_update.md",
+      "models": [
+        "User"
+      ],
+      "timestamp": "2025-09-10T16:45:27.848Z"
+    }
+  ],
+  "statistics": {
+    "totalDiagrams": 11,
+    "byType": {
+      "generic": 5,
+      "list": 2,
+      "create": 2,
+      "update": 2
+    },
+    "byController": {
+      "Auth": 5,
+      "": 0,
+      "Dashboard": 1,
+      "Matricula": 3,
+      "User": 2
+    }
+  }
+}

@@ -1,0 +1,248 @@
+{
+  "models": [
+    {
+      "name": "Academia",
+      "properties": [
+        {
+          "name": "nome",
+          "type": "fillable",
+          "dataType": ""
+        },
+        {
+          "name": "unidade",
+          "type": "fillable",
+          "dataType": ""
+        },
+        {
+          "name": "cnpj",
+          "type": "fillable",
+          "dataType": ""
+        },
+        {
+          "name": "email",
+          "type": "fillable",
+          "dataType": ""
+        },
+        {
+          "name": "telefone",
+          "type": "fillable",
+          "dataType": ""
+        },
+        {
+          "name": "endereco",
+          "type": "fillable",
+          "dataType": ""
+        },
+        {
+          "name": "descricao",
+          "type": "fillable",
+          "dataType": ""
+        },
+        {
+          "name": "modalidades",
+          "type": "fillable",
+          "dataType": "array"
+        },
+        {
+          "name": "horario_funcionamento",
+          "type": "fillable",
+          "dataType": ""
+        },
+        {
+          "name": "site_url",
+          "type": "fillable",
+          "dataType": ""
+        },
+        {
+          "name": "instagram_url",
+          "type": "fillable",
+          "dataType": ""
+        },
+        {
+          "name": "logo_path",
+          "type": "fillable",
+          "dataType": ""
+        }
+      ],
+      "methods": [],
+      "namespace": "App\\Models"
+    },
+    {
+      "name": "Matricula",
+      "properties": [
+        {
+          "name": "peso",
+          "type": "fillable",
+          "dataType": ""
+        },
+        {
+          "name": "altura",
+          "type": "fillable",
+          "dataType": ""
+        },
+        {
+          "name": "circunferencia_cintura",
+          "type": "fillable",
+          "dataType": ""
+        },
+        {
+          "name": "circunferencia_quadril",
+          "type": "fillable",
+          "dataType": ""
+        },
+        {
+          "name": "nivel_atividade",
+          "type": "fillable",
+          "dataType": ""
+        },
+        {
+          "name": "historico_saude",
+          "type": "fillable",
+          "dataType": ""
+        },
+        {
+          "name": "objetivos",
+          "type": "fillable",
+          "dataType": ""
+        },
+        {
+          "name": "modalidade",
+          "type": "fillable",
+          "dataType": ""
+        },
+        {
+          "name": "horario",
+          "type": "fillable",
+          "dataType": ""
+        },
+        {
+          "name": "observacoes",
+          "type": "fillable",
+          "dataType": ""
+        },
+        {
+          "name": "termos",
+          "type": "fillable",
+          "dataType": ""
+        }
+      ],
+      "methods": [],
+      "namespace": "App\\Models"
+    },
+    {
+      "name": "User",
+      "properties": [
+        {
+          "name": "name",
+          "type": "fillable",
+          "dataType": ""
+        },
+        {
+          "name": "email",
+          "type": "fillable",
+          "dataType": ""
+        },
+        {
+          "name": "password",
+          "type": "fillable",
+          "dataType": ""
+        }
+      ],
+      "methods": [],
+      "namespace": "App\\Models"
+    }
+  ],
+  "controllers": [
+    {
+      "name": "AuthController",
+      "methods": [
+        {
+          "name": "showLoginForm",
+          "params": ""
+        },
+        {
+          "name": "login",
+          "params": "Request $request"
+        },
+        {
+          "name": "showRegisterForm",
+          "params": ""
+        },
+        {
+          "name": "register",
+          "params": "Request $request"
+        },
+        {
+          "name": "logout",
+          "params": "Request $request"
+        }
+      ],
+      "namespace": "App\\Http\\Controllers"
+    },
+    {
+      "name": "Controller",
+      "methods": [],
+      "namespace": "App\\Http\\Controllers"
+    },
+    {
+      "name": "DashboardController",
+      "methods": [
+        {
+          "name": "index",
+          "params": ""
+        }
+      ],
+      "namespace": "App\\Http\\Controllers"
+    },
+    {
+      "name": "MatriculaController",
+      "methods": [
+        {
+          "name": "index",
+          "params": ""
+        },
+        {
+          "name": "create",
+          "params": ""
+        },
+        {
+          "name": "store",
+          "params": "Request $request"
+        }
+      ],
+      "namespace": "App\\Http\\Controllers"
+    },
+    {
+      "name": "UserController",
+      "methods": [
+        {
+          "name": "edit",
+          "params": ""
+        },
+        {
+          "name": "update",
+          "params": "Request $request"
+        }
+      ],
+      "namespace": "App\\Http\\Controllers"
+    }
+  ],
+  "services": [],
+  "relationships": [],
+  "directories": {
+    ".": {
+      "models": [
+        "Academia",
+        "Matricula",
+        "User"
+      ],
+      "controllers": [
+        "AuthController",
+        "Controller",
+        "DashboardController",
+        "MatriculaController",
+        "UserController"
+      ]
+    }
+  }
+}
