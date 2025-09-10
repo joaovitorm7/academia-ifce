@@ -139,7 +139,7 @@
                 <li><a href="{{ route('dashboard') }}">Início</a></li>
                 <li><a href="{{ route('modalidades') }}">Modalidades</a></li>
                 <li><a href="http://127.0.0.1:8000/matriculas/create">Matrícula</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="http://127.0.0.1:8000/contato">Contato</a></li>
                 <li><a href="http://127.0.0.1:8000/configuracoes" class="login-btn">Configurações</a></li>
             </ul>
         </nav>

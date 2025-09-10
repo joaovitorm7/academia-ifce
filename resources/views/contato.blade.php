@@ -198,7 +198,7 @@
                 <h3>Informações de Contato</h3>
                 <div class="contact-info-item">
                     <i class="fa-solid fa-location-dot"></i>
-                    <span>IFCE Campus Cedro - Av. José de Alencar, 123 - Cedro</span>
+                    <span>IFCE - Campus Cedro, Rua: Alameda José Quintino, s/n - Prado, Cedro - CE, 63400-000</span>
                 </div>
                 <div class="contact-info-item">
                     <i class="fa-solid fa-envelope"></i>

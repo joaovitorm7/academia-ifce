@@ -15,6 +15,32 @@
             padding: 0;
         }
 
+        .btn-sessao,
+        .btn-voltar {
+            background: #006400;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 0;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 16px auto 0 auto;
+            display: block;
+            width: 100%;
+            max-width: 350px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+
+        .btn-sessao:hover,
+        .btn-voltar:hover {
+            background: #065f46;
+            color: #fff;
+        }
+
         h1 {
             text-align: center;
             color: #006400;
@@ -125,6 +151,8 @@
         @csrf
         <button type="submit">Encerrar Sessão</button>
     </form>
+
+    <a href="{{ route('dashboard') }}" class="btn-sessao btn-voltar">← Voltar para o início</a>
 </body>
 
 </html>
