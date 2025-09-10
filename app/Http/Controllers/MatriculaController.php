@@ -21,7 +21,7 @@ class MatriculaController extends Controller
 
     public function store(Request $request)
     {
-        // 🔎 Validação dos campos
+        // Validação dos campos
         $validated = $request->validate([
             'peso' => 'required|numeric|min:1',
             'altura' => 'required|numeric|min:1',

@@ -179,11 +179,11 @@
         </div>
         <nav>
             <ul class="nav-links">
-                <li><a href="#">Início</a></li>
+                <li><a href="http://127.0.0.1:8000/dashboard">Início</a></li>
                 <li><a href="{{ route('modalidades') }}">Modalidades</a></li>
-                <li><a href="#">Matrícula</a></li>
+                <li><a href="http://127.0.0.1:8000/matriculas/create">Matrícula</a></li>
                 <li><a href="{{ route('contato') }}">Contato</a></li>
-                <li><a href="{{ route('login') }}" class="login-btn">Login</a></li>
+                <li><a href="http://127.0.0.1:8000/configuracoes" class="login-btn">Configurações</a></li>
             </ul>
         </nav>
     </header>
@@ -199,7 +199,7 @@
                 <h3>Informações de Contato</h3>
                 <div class="contact-info-item">
                     <i class="fa-solid fa-location-dot"></i>
-                    <span>IFCE Campus Fortaleza - Av. Treze de Maio, 2081 - Benfica</span>
+                    <span>IFCE Campus Cedro - Av. José de Alencar, 123 - Cedro</span>
                 </div>
                 <div class="contact-info-item">
                     <i class="fa-solid fa-envelope"></i>

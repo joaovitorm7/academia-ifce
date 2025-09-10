@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules\Password;
 
+
+// Controlador para autenticação de usuários
 class AuthController extends Controller
 {
     public function showLoginForm()
@@ -64,6 +66,8 @@ class AuthController extends Controller
         return redirect()->route('dashboard');
     }
 
+
+    // Encerrar sessão do usuário
     public function logout(Request $request)
     {
         Auth::logout();
