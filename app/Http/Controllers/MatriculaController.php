@@ -43,7 +43,6 @@ class MatriculaController extends Controller
             'circunferencia_quadril' => $validated['circunferencia_quadril'] ?? null,
             'nivel_atividade' => $validated['nivel_atividade'],
             'historico_saude' => $validated['historico_saude'] ?? null,
-            'objetivos' => $validated['objetivo'], // array
             'modalidade' => $validated['modalidade'],
             'horario' => $validated['horario'],
             'observacoes' => $validated['observacoes'] ?? null,
