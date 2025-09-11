@@ -206,21 +206,14 @@
                 </div>
                 <div class="contact-info-item">
                     <i class="fa-solid fa-phone"></i>
-                    <span>(85) 1234-5678</span>
+                    <span>(85) 3455-3064</span>
                 </div>
             </div>
 
             <div class="contact-card">
                 <h2>Localização</h2>
                 <div class="map-container">
-                    <iframe
-                        src="https://maps.app.goo.gl/vnktGtn5jRyjEyny8"
-                        width="600"
-                        height: 450px;
-                        style="border:0;"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3963.370010713009!2d-39.0560549!3d-6.6008556!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a30a0c2af16d77%3A0x5d0b763014d0f76e!2sInstituto%20Federal%20de%20Educa%C3%A7%C3%A3o%2C%20Ci%C3%AAncia%20e%20Tecnologia%20do%20Cear%C3%A1%20%7C%20Campus%20Cedro!5e0!3m2!1spt-BR!2sbr!4v1757607537422!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
             </div>

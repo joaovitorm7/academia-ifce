@@ -1,7 +1,7 @@
 {
   "projectName": "laravel/laravel",
   "projectVersion": "v12.28.1",
-  "generatedAt": "2025-09-10T16:45:27.891Z",
+  "generatedAt": "2025-09-11T12:40:34.329Z",
   "diagrams": [
     {
       "id": "AuthController-showLoginForm",
@@ -12,7 +12,7 @@
       "description": "Handles showLoginForm operation in AuthController",
       "fileName": "AuthController_showLoginForm.md",
       "models": [],
-      "timestamp": "2025-09-10T16:45:27.842Z"
+      "timestamp": "2025-09-11T12:40:34.253Z"
     },
     {
       "id": "AuthController-login",
@@ -23,7 +23,7 @@
       "description": "Handles login operation in AuthController",
       "fileName": "AuthController_login.md",
       "models": [],
-      "timestamp": "2025-09-10T16:45:27.843Z"
+      "timestamp": "2025-09-11T12:40:34.259Z"
     },
     {
       "id": "AuthController-showRegisterForm",
@@ -34,7 +34,7 @@
       "description": "Handles showRegisterForm operation in AuthController",
       "fileName": "AuthController_showRegisterForm.md",
       "models": [],
-      "timestamp": "2025-09-10T16:45:27.843Z"
+      "timestamp": "2025-09-11T12:40:34.259Z"
     },
     {
       "id": "AuthController-register",
@@ -47,7 +47,7 @@
       "models": [
         "User"
       ],
-      "timestamp": "2025-09-10T16:45:27.844Z"
+      "timestamp": "2025-09-11T12:40:34.260Z"
     },
     {
       "id": "AuthController-logout",
@@ -58,7 +58,7 @@
       "description": "Handles logout operation in AuthController",
       "fileName": "AuthController_logout.md",
       "models": [],
-      "timestamp": "2025-09-10T16:45:27.844Z"
+      "timestamp": "2025-09-11T12:40:34.260Z"
     },
     {
       "id": "DashboardController-index",
@@ -71,7 +71,7 @@
       "models": [
         "Academia"
       ],
-      "timestamp": "2025-09-10T16:45:27.845Z"
+      "timestamp": "2025-09-11T12:40:34.261Z"
     },
     {
       "id": "MatriculaController-index",
@@ -84,7 +84,7 @@
       "models": [
         "Matricula"
       ],
-      "timestamp": "2025-09-10T16:45:27.846Z"
+      "timestamp": "2025-09-11T12:40:34.262Z"
     },
     {
       "id": "MatriculaController-create",
@@ -95,7 +95,7 @@
       "description": "Creates a new resource in MatriculaController",
       "fileName": "MatriculaController_create.md",
       "models": [],
-      "timestamp": "2025-09-10T16:45:27.846Z"
+      "timestamp": "2025-09-11T12:40:34.262Z"
     },
     {
       "id": "MatriculaController-store",
@@ -108,7 +108,7 @@
       "models": [
         "Matricula"
       ],
-      "timestamp": "2025-09-10T16:45:27.847Z"
+      "timestamp": "2025-09-11T12:40:34.262Z"
     },
     {
       "id": "UserController-edit",
@@ -119,7 +119,7 @@
       "description": "Updates an existing resource in UserController",
       "fileName": "UserController_edit.md",
       "models": [],
-      "timestamp": "2025-09-10T16:45:27.847Z"
+      "timestamp": "2025-09-11T12:40:34.263Z"
     },
     {
       "id": "UserController-update",
@@ -132,7 +132,7 @@
       "models": [
         "User"
       ],
-      "timestamp": "2025-09-10T16:45:27.848Z"
+      "timestamp": "2025-09-11T12:40:34.263Z"
     }
   ],
   "statistics": {

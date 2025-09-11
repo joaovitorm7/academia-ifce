@@ -4,7 +4,7 @@
 
 Laravel Version: v12.28.1
 
-Generated: 10/09/2025, 13:45:27
+Generated: 11/09/2025, 09:40:34
 
 ## Table of Contents
 
