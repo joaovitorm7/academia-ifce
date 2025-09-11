@@ -1,87 +1,35 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modalidades Oferecidas - Instituto Federal</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+@extends('layouts.app')
+
+@section('content')
     <style>
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
         body {
             font-family: 'Roboto', sans-serif;
             background-color: #f0f2f5;
             color: #333;
         }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-
-        .header {
-            background-color: #00843D; /* Verde do Instituto Federal */
-            color: white;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-weight: 700;
-            font-size: 1.2rem;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 1.5rem;
-        }
-
-        .nav-links a {
-            padding: 0.5rem;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #ddd;
-        }
-
-        .login-btn {
-            border: 1px solid white;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-        }
-
-
         .main-content {
-            padding: 3rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
+            min-height: 80vh; /* ocupa quase toda a tela */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* centraliza verticalmente */
+            align-items: center;     /* centraliza horizontalmente */
+            padding: 2rem;
         }
 
         .main-title {
-            text-align: center;
             color: #00843D;
-            font-size: 2.5rem;
-            margin-bottom: 2.5rem;
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
             font-weight: 700;
+            text-align: center;
         }
 
         .cards-container {
             display: flex;
             justify-content: center;
-            gap: 2rem;
+            align-items: center;
+            gap: 1.5rem;
             flex-wrap: wrap;
         }
 
@@ -90,11 +38,12 @@
             border-radius: 10px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-            width: 320px;
+            width: 250px;
             display: flex;
             flex-direction: column;
             transition: transform 0.3s, box-shadow 0.3s;
         }
+
         .card:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
@@ -103,49 +52,32 @@
         .card-image {
             background-color: #00843D;
             color: white;
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: 700;
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 180px;
+            height: 140px;
         }
 
         .card-content {
-            padding: 1.5rem;
+            padding: 1rem;
         }
 
         .card-content h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
             color: #333;
         }
 
         .card-content p {
-            font-size: 1rem;
-            line-height: 1.6;
+            font-size: 0.9rem;
+            line-height: 1.4;
             color: #555;
         }
     </style>
-</head>
-<body>
 
-    <header class="header">
-        <div class="logo">
-            INSTITUTO FEDERAL<br>Ceará
-        </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="{{ route('dashboard') }}">Início</a></li>
-                <li><a href="{{ route('modalidades') }}">Modalidades</a></li>
-                <li><a href="http://127.0.0.1:8000/matriculas/create">Matrícula</a></li>
-                <li><a href="http://127.0.0.1:8000/contato">Contato</a></li>
-                <li><a href="http://127.0.0.1:8000/configuracoes" class="login-btn">Configurações</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main class="main-content">
+    <div class="main-content">
         <h1 class="main-title">Modalidades Oferecidas</h1>
 
         <div class="cards-container">
@@ -179,7 +111,5 @@
                 </div>
             </article>
         </div>
-    </main>
-
-</body>
-</html>
+    </div>
+@endsection
