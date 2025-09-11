@@ -1,85 +1,34 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato - Instituto Federal</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+@extends('layouts.app')
+
+@section('content')
     <style>
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
         body {
             font-family: 'Roboto', sans-serif;
             background-color: #f0f2f5;
             color: #333;
         }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .header {
-            background-color: #00843D;
-            color: white;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-weight: 700;
-            font-size: 1.2rem;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 1.5rem;
-        }
-
-        .nav-links a {
-            padding: 0.5rem;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #ddd;
-        }
-
-        .login-btn {
-            border: 1px solid white;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-        }
-
         .main-content {
-            padding: 3rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
         }
 
         .main-title {
-            text-align: center;
             color: #00843D;
-            font-size: 2.5rem;
-            margin-bottom: 2.5rem;
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
             font-weight: 700;
+            text-align: center;
         }
 
         .contact-cards-container {
             display: flex;
             justify-content: center;
+            align-items: flex-start;
             gap: 2rem;
             flex-wrap: wrap;
         }
@@ -90,16 +39,25 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             padding: 2rem;
             flex: 1;
-            min-width: 300px;
-            max-width: 550px;
+            min-width: 320px;
+            max-width: 400px; /* padronizado */
             display: flex;
             flex-direction: column;
+            text-align: left; /* letras retas e alinhadas à esquerda */
         }
 
         .contact-card h2 {
             color: #00843D;
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .contact-card h3 {
+            color: #00843D;
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            margin-bottom: 0.8rem;
             font-weight: 700;
         }
 
@@ -112,23 +70,19 @@
 
         .contact-info-item {
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             margin-bottom: 0.8rem;
             font-size: 1rem;
             color: #333;
         }
 
-        .contact-info-item i {
-            color: #00843D;
-            margin-right: 10px;
-            font-size: 1.2rem;
-            width: 20px;
-            text-align: center;
+        .contact-info-item span {
+            margin-left: 8px;
         }
 
         .map-container {
-            flex-grow: 1;
-            height: 350px;
+            width: 100%;
+            height: 300px;
             border: 1px solid #ddd;
             border-radius: 8px;
             overflow: hidden;
@@ -140,16 +94,20 @@
             border: none;
         }
 
+        /* Adicionando emojis nos itens de contato */
+        .contact-info-item.location::before {
+            content: "📍";
+        }
+
+        .contact-info-item.email::before {
+            content: "✉️";
+        }
+
+        .contact-info-item.phone::before {
+            content: "📞";
+        }
+
         @media (max-width: 768px) {
-            .header {
-                flex-direction: column;
-                padding: 1rem;
-            }
-            .nav-links {
-                margin-top: 1rem;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
             .main-content {
                 padding: 2rem 1rem;
             }
@@ -162,32 +120,15 @@
             }
             .contact-card {
                 width: 100%;
-                max-width: 450px;
+                max-width: 400px;
             }
             .map-container {
-                height: 300px;
+                height: 250px;
             }
         }
     </style>
-</head>
-<body>
 
-    <header class="header">
-        <div class="logo">
-            INSTITUTO FEDERAL<br>Ceará
-        </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="http://127.0.0.1:8000/dashboard">Início</a></li>
-                <li><a href="{{ route('modalidades') }}">Modalidades</a></li>
-                <li><a href="http://127.0.0.1:8000/matriculas/create">Matrícula</a></li>
-                <li><a href="{{ route('contato') }}">Contato</a></li>
-                <li><a href="http://127.0.0.1:8000/configuracoes" class="login-btn">Configurações</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main class="main-content">
+    <div class="main-content">
         <h1 class="main-title">Contato</h1>
 
         <div class="contact-cards-container">
@@ -196,16 +137,13 @@
                 <p>Entre em contato conosco para mais informações sobre matrículas, horários ou dúvidas sobre nossas modalidades.</p>
 
                 <h3>Informações de Contato</h3>
-                <div class="contact-info-item">
-                    <i class="fa-solid fa-location-dot"></i>
+                <div class="contact-info-item location">
                     <span>IFCE - Campus Cedro, Rua: Alameda José Quintino, s/n - Prado, Cedro - CE, 63400-000</span>
                 </div>
-                <div class="contact-info-item">
-                    <i class="fa-solid fa-envelope"></i>
+                <div class="contact-info-item email">
                     <span>academia@ifce.edu.br</span>
                 </div>
-                <div class="contact-info-item">
-                    <i class="fa-solid fa-phone"></i>
+                <div class="contact-info-item phone">
                     <span>(85) 3455-3064</span>
                 </div>
             </div>
@@ -213,12 +151,10 @@
             <div class="contact-card">
                 <h2>Localização</h2>
                 <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3963.370010713009!2d-39.0560549!3d-6.6008556!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a30a0c2af16d77%3A0x5d0b763014d0f76e!2sInstituto%20Federal%20de%20Educa%C3%A7%C3%A3o%2C%20Ci%C3%AAncia%20e%20Tecnologia%20do%20Cear%C3%A1%20%7C%20Campus%20Cedro!5e0!3m2!1spt-BR!2sbr!4v1757607537422!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3963.370010713009!2d-39.0560549!3d-6.6008556!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a30a0c2af16d77%3A0x5d0b763014d0f76e!2sInstituto%20Federal%20de%20Educa%C3%A7%C3%A3o%2C%20Ci%C3%AAncia%20e%20Tecnologia%20do%20Cear%C3%A1%20%7C%20Campus%20Cedro!5e0!3m2!1spt-BR!2sbr!4v1757607537422!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
             </div>
         </div>
-    </main>
-
-</body>
-</html>
+    </div>
+@endsection
