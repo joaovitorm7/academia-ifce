@@ -14,6 +14,7 @@ classDiagram
     +logo_path
   }
   class Matricula {
+    +nome
     +peso
     +altura
     +circunferencia_cintura

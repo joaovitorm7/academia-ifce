@@ -113,6 +113,10 @@
             <!-- Características Físicas -->
             <h4>Características Físicas</h4>
 
+            <label for="nome">Nome *</label>
+            <input type="text" name="nome" value="{{ old('nome') }}" step="0.1" required>
+            @error('nome') <small>{{ $message }}</small> @enderror
+
             <label for="peso">Peso (kg) *</label>
             <input type="number" name="peso" value="{{ old('peso') }}" step="0.1" required>
             @error('peso') <small>{{ $message }}</small> @enderror

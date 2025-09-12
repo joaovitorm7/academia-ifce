@@ -1,11 +1,7 @@
 {
   "projectName": "laravel/laravel",
   "projectVersion": "v12.28.1",
-<<<<<<< HEAD
-  "generatedAt": "2025-09-10T18:23:55.440Z",
-=======
-  "generatedAt": "2025-09-11T12:40:34.329Z",
->>>>>>> e40a2253a4819a4251464c8696b0af0c694f07f6
+  "generatedAt": "2025-09-11T19:49:38.336Z",
   "diagrams": [
     {
       "id": "AuthController-showLoginForm",
@@ -16,11 +12,7 @@
       "description": "Handles showLoginForm operation in AuthController",
       "fileName": "AuthController_showLoginForm.md",
       "models": [],
-<<<<<<< HEAD
-      "timestamp": "2025-09-10T18:23:55.401Z"
-=======
-      "timestamp": "2025-09-11T12:40:34.253Z"
->>>>>>> e40a2253a4819a4251464c8696b0af0c694f07f6
+      "timestamp": "2025-09-11T19:49:38.247Z"
     },
     {
       "id": "AuthController-login",
@@ -31,11 +23,7 @@
       "description": "Handles login operation in AuthController",
       "fileName": "AuthController_login.md",
       "models": [],
-<<<<<<< HEAD
-      "timestamp": "2025-09-10T18:23:55.403Z"
-=======
-      "timestamp": "2025-09-11T12:40:34.259Z"
->>>>>>> e40a2253a4819a4251464c8696b0af0c694f07f6
+      "timestamp": "2025-09-11T19:49:38.250Z"
     },
     {
       "id": "AuthController-showRegisterForm",
@@ -46,11 +34,7 @@
       "description": "Handles showRegisterForm operation in AuthController",
       "fileName": "AuthController_showRegisterForm.md",
       "models": [],
-<<<<<<< HEAD
-      "timestamp": "2025-09-10T18:23:55.403Z"
-=======
-      "timestamp": "2025-09-11T12:40:34.259Z"
->>>>>>> e40a2253a4819a4251464c8696b0af0c694f07f6
+      "timestamp": "2025-09-11T19:49:38.251Z"
     },
     {
       "id": "AuthController-register",
@@ -63,11 +47,7 @@
       "models": [
         "User"
       ],
-<<<<<<< HEAD
-      "timestamp": "2025-09-10T18:23:55.404Z"
-=======
-      "timestamp": "2025-09-11T12:40:34.260Z"
->>>>>>> e40a2253a4819a4251464c8696b0af0c694f07f6
+      "timestamp": "2025-09-11T19:49:38.252Z"
     },
     {
       "id": "AuthController-logout",
@@ -78,11 +58,7 @@
       "description": "Handles logout operation in AuthController",
       "fileName": "AuthController_logout.md",
       "models": [],
-<<<<<<< HEAD
-      "timestamp": "2025-09-10T18:23:55.405Z"
-=======
-      "timestamp": "2025-09-11T12:40:34.260Z"
->>>>>>> e40a2253a4819a4251464c8696b0af0c694f07f6
+      "timestamp": "2025-09-11T19:49:38.254Z"
     },
     {
       "id": "DashboardController-index",
@@ -95,11 +71,7 @@
       "models": [
         "Academia"
       ],
-<<<<<<< HEAD
-      "timestamp": "2025-09-10T18:23:55.406Z"
-=======
-      "timestamp": "2025-09-11T12:40:34.261Z"
->>>>>>> e40a2253a4819a4251464c8696b0af0c694f07f6
+      "timestamp": "2025-09-11T19:49:38.255Z"
     },
     {
       "id": "MatriculaController-index",
@@ -112,11 +84,7 @@
       "models": [
         "Matricula"
       ],
-<<<<<<< HEAD
-      "timestamp": "2025-09-10T18:23:55.407Z"
-=======
-      "timestamp": "2025-09-11T12:40:34.262Z"
->>>>>>> e40a2253a4819a4251464c8696b0af0c694f07f6
+      "timestamp": "2025-09-11T19:49:38.261Z"
     },
     {
       "id": "MatriculaController-create",
@@ -127,11 +95,7 @@
       "description": "Creates a new resource in MatriculaController",
       "fileName": "MatriculaController_create.md",
       "models": [],
-<<<<<<< HEAD
-      "timestamp": "2025-09-10T18:23:55.408Z"
-=======
-      "timestamp": "2025-09-11T12:40:34.262Z"
->>>>>>> e40a2253a4819a4251464c8696b0af0c694f07f6
+      "timestamp": "2025-09-11T19:49:38.263Z"
     },
     {
       "id": "MatriculaController-store",
@@ -144,11 +108,7 @@
       "models": [
         "Matricula"
       ],
-<<<<<<< HEAD
-      "timestamp": "2025-09-10T18:23:55.409Z"
-=======
-      "timestamp": "2025-09-11T12:40:34.262Z"
->>>>>>> e40a2253a4819a4251464c8696b0af0c694f07f6
+      "timestamp": "2025-09-11T19:49:38.265Z"
     },
     {
       "id": "UserController-edit",
@@ -159,11 +119,7 @@
       "description": "Updates an existing resource in UserController",
       "fileName": "UserController_edit.md",
       "models": [],
-<<<<<<< HEAD
-      "timestamp": "2025-09-10T18:23:55.410Z"
-=======
-      "timestamp": "2025-09-11T12:40:34.263Z"
->>>>>>> e40a2253a4819a4251464c8696b0af0c694f07f6
+      "timestamp": "2025-09-11T19:49:38.266Z"
     },
     {
       "id": "UserController-update",
@@ -176,11 +132,7 @@
       "models": [
         "User"
       ],
-<<<<<<< HEAD
-      "timestamp": "2025-09-10T18:23:55.411Z"
-=======
-      "timestamp": "2025-09-11T12:40:34.263Z"
->>>>>>> e40a2253a4819a4251464c8696b0af0c694f07f6
+      "timestamp": "2025-09-11T19:49:38.269Z"
     }
   ],
   "statistics": {

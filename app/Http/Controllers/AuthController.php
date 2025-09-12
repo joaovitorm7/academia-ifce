@@ -10,6 +10,7 @@ use Illuminate\Validation\Rules\Password;
 
 
 // Controlador para autenticação de usuários
+// Login e Registro
 class AuthController extends Controller
 {
     public function showLoginForm()

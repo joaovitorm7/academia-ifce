@@ -18,6 +18,7 @@ erDiagram
   }
   matricula {
     int id PK "Primary key"
+    string nome
     string peso
     string altura
     string circunferencia_cintura

@@ -4,11 +4,7 @@
 
 Laravel Version: v12.28.1
 
-<<<<<<< HEAD
-Generated: 10/09/2025, 15:23:55
-=======
-Generated: 11/09/2025, 09:40:34
->>>>>>> e40a2253a4819a4251464c8696b0af0c694f07f6
+Generated: 11/09/2025, 16:49:38
 
 ## Table of Contents
 

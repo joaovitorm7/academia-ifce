@@ -23,6 +23,7 @@ class MatriculaController extends Controller
     {
         // Validação dos campos
         $validated = $request->validate([
+            'nome' => 'required|string|max:255',
             'peso' => 'required|numeric|min:1',
             'altura' => 'required|numeric|min:1',
             'circunferencia_cintura' => 'nullable|numeric|min:1',
@@ -32,11 +33,11 @@ class MatriculaController extends Controller
             'modalidade' => 'required|in:musculacao,funcional,ginastica,crossfit,yoga',
             'horario' => 'required|in:manha,tarde,noite',
             'observacoes' => 'nullable|string',
-
             'termos' => 'accepted',
         ]);
 
         Matricula::create([
+            'nome' => $validated['nome'],
             'peso' => $validated['peso'],
             'altura' => $validated['altura'],
             'circunferencia_cintura' => $validated['circunferencia_cintura'] ?? null,

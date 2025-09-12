@@ -71,6 +71,11 @@
       "name": "Matricula",
       "properties": [
         {
+          "name": "nome",
+          "type": "fillable",
+          "dataType": ""
+        },
+        {
           "name": "peso",
           "type": "fillable",
           "dataType": ""

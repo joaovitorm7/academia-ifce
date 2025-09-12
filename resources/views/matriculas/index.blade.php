@@ -15,6 +15,7 @@
     <table class="table">
         <thead>
             <tr>
+                <th>Nome</th>
                 <th>Peso</th>
                 <th>Altura</th>
                 <th>Modalidade</th>
@@ -25,6 +26,7 @@
         <tbody>
             @forelse($matriculas as $matricula)
                 <tr>
+                    <td>{{ $matricula->nome }}</td>
                     <td>{{ $matricula->peso }} kg</td>
                     <td>{{ $matricula->altura }} cm</td>
                     <td>{{ ucfirst($matricula->modalidade) }}</td>
